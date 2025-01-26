@@ -126,7 +126,7 @@ for (city in names(city_datasets)) {
 
 Using intermediate data file corresponding to the Cleveland dataset, we are able to conduct the preprocessing steps described in [cleveland_oh.R]('https://github.com/fivethirtyeight/police-settlements/blob/main/cleveland_oh/cleveland_oh.R') corresponding script with function to generate plot. As the [original GitHub]('https://github.com/fivethirtyeight/police-settlements/blob/main/cleveland_oh/README.md') states, they were provided settlement data for cases paid out between 2010 and 2020. In this calendar year corresponds to the year the settlement was paid out and there was no information regarding the type of misconduct, so this was not used in the filtering process. The authors stated that while some cases included settlements that were paid out in multiple installments over more than 1 year, the data has been defined as amount Cleveland paid per year rather than the number of cases settled in each year. The preprocessing steps have been copied into the script sourced below, and we were able to conduct the same preprocessing and get the same final outputs using the checks provided in the original script. Thus the preprocessing steps appear to be consistent with those that the authors had used. We have additionally added the steps for visualizing the data which was not provided in the published FiveThirtyEight script, and visualize it below.
 
-```{r Figure1}
+```{r Figure1, fig.width=6, fig.height=4, out.width="60%"}
 
 #Use intermediate_cleveland file to process data appropriately (described in corresponding R script)
 source(here::here('helper_functions/Figure1_policesettlements.R'))
@@ -148,7 +148,7 @@ From the visualization we see that the size of the bars appears to be consistent
 
 This figure represents discrepancies and cautions readers from comparing data from police departments of different states due to their differences in categorization of the corresponding allegations for the settlements. Using the final files for Cincinnati and Charleston shared by the authors of the FiveThirtyEight article, who had processed the data provided from their respective city police departments, we loaded those tables and are sourcing the code with stacked barplot visual below. The authros described that for Cincinnati cases closed between 2010-2020, some of the allegation categorization were ambiguous, with labels like 'litigation' and 'negligence'. For the Charleston dataset, the authors stated that they received PDFs from 2010-2019, a slightly different time frame, and manually transferred some of the data with "Law Enforcement" within the label. The manual transferring of the data is a bit concerning for the possibility of errors, and additionally, the authors have noted that for this dataset there is uncertainty of whether the data includes both claims and settlements. The corresponding data dictionaries are listed for [Cincinnati, OH]('https://github.com/fivethirtyeight/police-settlements/tree/main/cincinnati_oh') and [Charleston, SC]('https://github.com/fivethirtyeight/police-settlements/tree/main/charleston_sc'), respectively.
 
-```{r Figure2}
+```{r Figure2, fig.width=6, fig.height=4, out.width="60%"}
 source(here::here('helper_functions/Figure2_cincinnati_vs_charleston.R'))
 F2 <- figure2(cincinnati, charleston)
 ggsave(filename = here::here('plots/', "Figure2_output_barplot.png"),
@@ -164,7 +164,7 @@ The plot was not entirely reproduced the same way, including differences in the 
 
 The last figure that was attempted to be reproduced was the final figure of the article, labeled "Large settlements can skew a city's average payment". The final processed data collected from 31 city police departments was loaded (obtained from FiveThirtyEight's GitHub), and the corresponding csv names are stored in city_info. As the article states, the authors asked for detailed information of data dictionaries in the public record requests (conducted in partnership between FiveThirtyEight and The Marshall Project), but they only received a detailed data dictionary from New York City. The authors conveyed that there was ambiguity in handling the multi-year totals for the calculation of settlement amounts, as well as how Additionally, the authors left scratching our heads about how to understand the data underneath the multi-year totals. The authors stated that they wanted to convey that the settlement amount (arbitrarily decided based on how dates and settlement and misconduct categorizations were defined per each city, and uncertainty about the completeness of records) is hard to make clear conclusions or interpret, as we lack information of the specific settlements, and the measures of center of the settlements may not indicate the severity of the case.
 
-```{r Figure3}
+```{r Figure3, fig.width=6, fig.height=8, out.width="60%"}
 #Create dataframe of combined data from each of the cities
 full <- bind_rows(springfield, milwaukee, los_angeles, san_francisco, washington_dc, 
                       chicago, st_louis, baltimore, boston, cleveland, little_rock, 
