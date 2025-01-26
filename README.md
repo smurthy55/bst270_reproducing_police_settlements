@@ -22,8 +22,8 @@ conda env create -f environment.yml
 ## Project Structure
 
 The main codes used for this analysis are in the parent directory in two
-formats: (1) as a Quarto file 'main_policesettlements_quarto.qmd' or
-alternatively, (2) an Rmd file 'main_rmd_policesettlements.Rmd'. These
+formats: (1) as a Quarto file `main_policesettlements_quarto.qmd` or
+alternatively, (2) an Rmd file `main_rmd_policesettlements.Rmd`. These
 files can be compiled through the command line or on IDEs like RStudio.
 
 These files above call the helper functions made for each of the figures
@@ -64,8 +64,8 @@ directory as a html or pdf file.
     `loaded via a namespace (and not attached): [1] sass_0.4.9 generics_0.1.3 renv_1.0.11 stringi_1.8.4 hms_1.1.3 [6] digest_0.6.37 magrittr_2.0.3 evaluate_1.0.3 grid_4.4.2 timechange_0.3.0 [11] fastmap_1.2.0 cellranger_1.1.0 rprojroot_2.0.4 jsonlite_1.8.9 jquerylib_0.1.4 [16] cli_3.6.3 rlang_1.1.5 munsell_0.5.1 withr_3.0.2 cachem_1.1.0 [21] yaml_2.3.10 tools_4.4.2 tzdb_0.4.0 colorspace_2.1-1 vctrs_0.6.5 [26] R6_2.5.1 lifecycle_1.0.4 clisymbols_1.2.0 pkgconfig_2.0.3 pillar_1.10.1 [31] bslib_0.8.0 gtable_0.3.6 glue_1.8.0 Rcpp_1.0.14 xfun_0.50 [36] tidyselect_1.2.1 rstudioapi_0.17.1 knitr_1.49 htmltools_0.5.8.1 rmarkdown_2.29 [41] compiler_4.4.2`
 
 3.  Click "Preview" or "Run" to execute, or if loaded the conda
-    environment, can run the rmarkdown via terminal using R -e
-    "rmarkdown::render('main_rmd_policesettlements.Rmd')".
+    environment, can run the rmarkdown via terminal using 
+    `R -e "rmarkdown::render('main_rmd_policesettlements.Rmd')"`
 
 ## Data
 
