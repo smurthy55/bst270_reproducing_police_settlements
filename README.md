@@ -1,9 +1,3 @@
----
-editor_options: 
-  markdown: 
-    wrap: 72
----
-
 # BST 270 Course Individual Project - Reproducing Figures from FiveThirtyEight Police Settlement Article
 
 # BST 270: Individual Project
@@ -100,7 +94,7 @@ among other variables. Thus for each city, the data was processed
 separately, further
 
 | Variable | Definition |
-|----|----|
+|---------------------------|---------------------------------------------|
 | incident_date | Date on which incident took place |
 | incident_year | Pulled from filed_year |
 | filed_date | Date claim or lawsuit was filed |
