@@ -90,8 +90,7 @@ copied from the original [FiveThirtyEight
 GitHub]('https://github.com/fivethirtyeight/police-settlements/blob/main/README.md?plain=1').
 However, note that each file per city has some variation in defining
 closed_date, amount_awarded, calendar_year, and summary_allegations,
-among other variables. Thus for each city, the data was processed
-separately, further
+among other variables. See the general descriptions copied from original GitHub below.
 
 | Variable | Definition |
 |---------------------------|---------------------------------------------|
