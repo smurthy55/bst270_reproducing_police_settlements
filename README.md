@@ -37,8 +37,8 @@ directory.
 The plots that have been produced by the code shared in this repository
 can be compared and accessible in the `./plots` folder.
 
-Additionally, the knitted outputs obtained are located in the parent
-directory as a html or pdf file.
+Additionally, the knitted outputs obtained are located in the main
+directory as well as a html or pdf file.
 
 ### Getting Started - Version 1 using Conda and Command line
 
