@@ -21,7 +21,7 @@ conda env create -f environment.yml
 
 ## Project Structure
 
-The main codes used for this analysis are in the parent directory in two
+The main codes used for this analysis are in the main directory in two
 formats: (1) as a Quarto file `main_policesettlements_quarto.qmd` or
 alternatively, (2) an Rmd file `main_rmd_policesettlements.Rmd`. These
 files can be compiled through the command line or on IDEs like RStudio.
@@ -40,16 +40,23 @@ can be compared and accessible in the `./plots` folder.
 Additionally, the knitted outputs obtained are located in the parent
 directory as a html or pdf file.
 
-### Getting Started
+### Getting Started - Version 1 using Conda and Command line
 
-1.  Clone the GitHub repository.
+1.  Clone the GitHub repository and load the environment via terminal using `conda env create -f environment.yml`. Activate conda environment.
 
-2.  Option 1: Open the `.rmd` file in R Studio or Option 2: Open the
-    quarto file in R studio. Note, make sure to install the R packages,
+2. OPTION 1: In terminal, generate knitted file using the command     `R -e "rmarkdown::render('main_rmd_policesettlements.Rmd')"` within the project folder.
+An R session will open and the markdown file will be knitted.
+
+   OPTION 2: If conda environment has not been activated, the necessary libraries can still be loaded through the R files.
+   Open the `main_rmd_policesettlements.Rmd` file in R Studio or Option 2: Open the
+    quarto file `main_policesettlements_quarto.qmd` in R studio. Note, make sure to install the R packages,
     as described in the environment.yml file or as listed in the
-    sessionInfo() copied below.
-
-    `sessionInfo() R version 4.4.2 (2024-10-31) Platform: aarch64-apple-darwin20 Running under: macOS Sonoma 14.5`
+    sessionInfo() copied below, including the packages readxl, here, tidyr, dplyr, lubridate, stringr, ggplot2, tinytex, scales (descriptions of usage in Rmd and Quarto files).
+    See sessionInfo() below for versions.
+    
+    `sessionInfo()` 
+    
+    `R version 4.4.2 (2024-10-31) Platform: aarch64-apple-darwin20 Running under: macOS Sonoma 14.5`
 
     `Matrix products: default BLAS: /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib; LAPACK version 3.12.0`
 
@@ -63,8 +70,8 @@ directory as a html or pdf file.
 
     `loaded via a namespace (and not attached): [1] sass_0.4.9 generics_0.1.3 renv_1.0.11 stringi_1.8.4 hms_1.1.3 [6] digest_0.6.37 magrittr_2.0.3 evaluate_1.0.3 grid_4.4.2 timechange_0.3.0 [11] fastmap_1.2.0 cellranger_1.1.0 rprojroot_2.0.4 jsonlite_1.8.9 jquerylib_0.1.4 [16] cli_3.6.3 rlang_1.1.5 munsell_0.5.1 withr_3.0.2 cachem_1.1.0 [21] yaml_2.3.10 tools_4.4.2 tzdb_0.4.0 colorspace_2.1-1 vctrs_0.6.5 [26] R6_2.5.1 lifecycle_1.0.4 clisymbols_1.2.0 pkgconfig_2.0.3 pillar_1.10.1 [31] bslib_0.8.0 gtable_0.3.6 glue_1.8.0 Rcpp_1.0.14 xfun_0.50 [36] tidyselect_1.2.1 rstudioapi_0.17.1 knitr_1.49 htmltools_0.5.8.1 rmarkdown_2.29 [41] compiler_4.4.2`
 
-3.  Click "Preview" or "Run" to execute, or if loaded the conda
-    environment, can run the rmarkdown via terminal using 
+3.  Click "Preview" or "Run" to execute. Otherwise and preferably, if conda
+    environment has been created and activated, can run the rmarkdown via terminal using 
     `R -e "rmarkdown::render('main_rmd_policesettlements.Rmd')"`
 
 ## Data
