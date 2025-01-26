@@ -497,23 +497,23 @@ indicate the severity of the case.
 
 \includegraphics[width=0.6\textwidth,height=\textheight]{plots/Figure3_output_segmentplot.png}
 
-As shown above, we have attempted to reproduce the final figure from the
-article. Note that outside of aesthetics, we do notice that although
-most values appear to be similar to the original article for the median
-and average settlement amount, we do see a difference for the gap
-between Richmond, VA median and average settlement amounts. Reviewing
-the corresponding original github readme file for the Richmond dataset,
-the authors mentioned that seven follow-up cases were added, which may
-have been included after the article got published. It is unclear which
-cases contributed to a smaller difference between median and average.
-Additionally, some cases, like Roanoke and Cambridge had very close or
-the same median and average values when computed from the shared final
-files. However, the final plot included in the article shows half of the
-``blue'' and ``red'' dots near each other. I did not figure out how to
-reproduce these elements, and attempted to make the plot similar by
-using a position nudge() function within ggplot. While the final files
-were provided, it is clear that there is some subjectivity in the
-inclusion of certain cases, and uncertainty in defining the time frames.
+Overall, the authors did provide several aspects included multiple
+levels of the data files and processing steps, as well as a data
+dictionary, which were extremely helpful for reproducing the figures.
+The authors were able to provide the data that they collected publicly
+from each of the city police departments and convey inconsistencies as
+well as missing information for any of the fields and changes over the
+approximately 10 year period. Uncertainty about updates regarding
+categorization or inclusion of certain cases after follow up aligns with
+what the authors stated about their conclusion that it is not advisable
+to compare different cities police settlement data, since each city
+conducts their record keeping differently. Additionally, there could be
+more standardization of data fields across regions to help with
+comparisons across and within cities over time. However, overall, the
+data was accessible, codes for any formatting were generally explained
+or provided, and some visualizations slightly differed based on tools
+which were used (which were not shared) however appeared to convey
+similar information.
 
 \subsection{Appendix. Session Info}\label{appendix.-session-info}
 
