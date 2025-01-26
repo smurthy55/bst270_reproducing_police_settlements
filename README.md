@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # BST 270 Course Individual Project - Reproducing Figures from FiveThirtyEight Police Settlement Article
 Individual project for BST 270 course
 =======
